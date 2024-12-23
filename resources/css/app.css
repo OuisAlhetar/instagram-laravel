@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .card {
+        @apply flex flex-col bg-white my-4 rounded-xl border border-gray-200;
+    }
+
+    .card-header {
+        @apply flex flex-row items-center p-5;
+    }
+
+    .card-body {
+
+    }
+
+    .card-footer {
+        @apply border-t border-t-gray-200 p-3 mt-5;
+    }
+}
+
+@layer utilities {
+    input[type="file"]::file-selector-button {
+        @apply inline-flex items-center pr-5 pl-10 py-2 bg-gray-800 border border-transparent font-semibold text-xs text-white uppercase
+        tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300
+        disabled:opacity-25 transition ease-in-out duration-150 cursor-pointer;
+        margin-inline-start: -1rem;
+        margin-inline-end: 1rem;
+    }
+
+    * {
+        @apply font-body;
+    }
+
+}
